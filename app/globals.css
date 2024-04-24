@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blackBorder {
+    @apply border border-black/10;
+    /* same as border-black/[0.1] 👆*/
+}
