@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import ActiveHeaderContextProvider from "@/context/ActiveHeaderContextProvider";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,8 @@ export default function RootLayout({
           <Toaster position="bottom-center" reverseOrder={true} />
           <Footer />
         </ActiveHeaderContextProvider>
+
+        <SpeedInsights />
       </body>
     </html>
   );
