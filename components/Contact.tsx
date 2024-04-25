@@ -6,9 +6,27 @@ import { TbMessages } from "react-icons/tb";
 import SectionHeading from "./SectionHeading";
 import SubmitBtn from "./SubmitBtn";
 import toast from "react-hot-toast";
+import { useRef } from "react";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    const { data, error } = await sendEmail(formData);
+
+    if (error) {
+      toast.error(error, { duration: 8000 });
+      return;
+    }
+
+    toast.success("Email Sent Successfully :)");
+
+    formRef.current?.reset();
+  };
 
   return (
     <motion.section
@@ -28,6 +46,7 @@ export default function Contact() {
       }}
       ref={ref}
     >
+      
       <div className="flex flex-row items-center justify-center gap-2">
         <SectionHeading name="Contact Me" />
         <TbMessages className="text-3xl -translate-y-4" />
@@ -43,19 +62,11 @@ export default function Contact() {
         or through this form.
       </p>
 
+      
       <form
+        ref={formRef}
+        onSubmit={handleSubmit}
         className="mt-10 flex flex-col"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-          
-          if(error) {
-            toast.error(error, { duration: 8000 });
-            return;
-          }
-
-          toast.success("Email Sent Successfully :)");
-        }}
-        
       >
 
         <input
