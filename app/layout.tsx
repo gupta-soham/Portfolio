@@ -28,10 +28,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: "@_soham_gupta",
-    title: 'Soham Gupta | Personal Portfolio',
-    description: 'Soham is a full-stack developer currently pursuing his Bachelor\'s degree and is proficient in full stack development.',
-    images: ['https://raw.githubusercontent.com/gupta-soham/Portfolio/master/public/og-image.png'],
   },
 };
 
