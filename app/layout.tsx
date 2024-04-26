@@ -10,9 +10,29 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Soham Gupta | Personal Portfolio",
-  description:
-    "Soham is a full-stack developer currently pursuing his bachelor's degree.",
+  title: 'Soham Gupta | Personal Portfolio',
+  description: 'Soham is a full-stack developer currently pursuing his Bachelor\'s degree and is proficient in full stack development.',
+  openGraph: {
+    title: 'Soham Gupta | Personal Portfolio',
+    description: 'Soham is a full-stack developer currently pursuing his Bachelor\'s degree and is proficient in full stack development.',
+    url: 'https://sohamgupta.co/',
+    type: 'website',
+    images: [
+      {
+        url: 'https://raw.githubusercontent.com/gupta-soham/Portfolio/master/public/og-image.png',
+        width: 1200,
+        height: 300,
+        alt: 'Website Preview Image',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: "@_soham_gupta",
+    title: 'Soham Gupta | Personal Portfolio',
+    description: 'Soham is a full-stack developer currently pursuing his Bachelor\'s degree and is proficient in full stack development.',
+    images: ['https://raw.githubusercontent.com/gupta-soham/Portfolio/master/public/og-image.png'],
+  },
 };
 
 export default function RootLayout({

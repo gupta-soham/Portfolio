@@ -4,7 +4,6 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 import clsx from "clsx";
-import { useContext } from "react";
 import { useActiveHeaderContext } from "@/context/ActiveHeaderContextProvider";
 
 
