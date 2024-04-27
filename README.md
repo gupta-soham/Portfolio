@@ -60,6 +60,16 @@ git clone https://github.com/gupta-soham/Portfolio.git
 cd portfolio
 ```
 
+### Environment Variables
+
+Create a `.env` file in the root directory and add your Resend API key:
+
+```bash
+RESEND_API_KEY=your_resend_api_key
+```
+
+This API key is required for the email sending functionality to work. You can obtain a Resend API key by signing up on the [Resend website](https://resend.com/).
+
 ### Installing Dependencies
 
 Install all the required packages using yarn:
