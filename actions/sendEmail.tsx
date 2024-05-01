@@ -29,30 +29,24 @@ export const sendEmail = async (formData: FormData) => {
         .replace(/\./g, " ")
     : " ";
 
-  console.log("Form filled by: ", formData.get("email"), name, "\n");
+  const data = await resend.emails.send({
+    from: `${name} <onboarding@resend.dev>`,
+    to: "soham.gupta003@gmail.com",
+    subject: `Message from: ${name} | through Contact Form`,
+    reply_to: senderEmail as string,
+    react: (
+      <EmailStyles
+        message={message as string}
+        senderName={name}
+        senderEmail={senderEmail as string}
+      />
+    ),
+  });
 
-  let data;
-  try {
-    data = await resend.emails.send({
-      from: `${name} <onboarding@resend.dev>`,
-      to: "soham.gupta003@gmail.com",
-      subject: `Message from: ${name} | through Contact Form`,
-      reply_to: senderEmail as string,
-      react: (
-        <EmailStyles
-          message={message as string}
-          senderName={name}
-          senderEmail={senderEmail as string}
-        />
-      ),
-    });
-  } catch (error: unknown) {
-    return {
-      error: getErrorMessage(error),
-    };
-  }
+  console.log("Form filled by: ", formData.get("email"), " | Name: ", name, "\n");
 
   return {
-    data,
+    data: data.data,
+    error: data.error ? getErrorMessage(data.error) : null,
   };
 };
