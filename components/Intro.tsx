@@ -50,7 +50,7 @@ export default function Intro() {
         </div>
       </div>
 
-      <motion.h1
+      <motion.div
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function Intro() {
           <span className="font-bold underline decoration-indigo-500 hover:text-indigo-500 hover:no-underline">DevOps</span> practices. My focus is{" "}
           <span className="font-bold underline hover:text-sky-500 hover:no-underline">React (Next.js)</span>.
         </motion.h1>
-      </motion.h1>
+      </motion.div>
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
@@ -91,7 +91,7 @@ export default function Intro() {
         </Link>
 
         <a
-          href="/Resume.pdf"
+          href="https://ggl.link/resume-sg"
           target="_blank"
           download
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-black transition blackBorder"
@@ -118,7 +118,7 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://x.com/_soham_gupta"
+            href="https://x.com/sohamgpt"
             target="_blank"
             className="bg-white text-gray-600 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-black active:scale-105 transition blackBorder"
           >

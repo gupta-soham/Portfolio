@@ -1,5 +1,8 @@
 import chromeExtImg from "@/public/chrome-ext.png";
-import paymentApp1Img from "@/public/payment-app-v1.png";
+import paymentAppImg from "@/public/payment-app-v1.png";
+import cryptImg from "@/public/crypt.png";
+import dogRaterImg from "@/public/dograter.png";
+import web3wallet from "@/public/web3-wallet.png";
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 import { SiVlcmediaplayer } from "react-icons/si";
@@ -50,24 +53,51 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData = [
-  {
-    title: "Payments App",
-    description:
-      "A full-stack Payment application which allows users to create and view their account balance and transfer money to other registered users.",
-    tags: ["React", "Mongo DB", "Tailwind", "Express JS", "JWT Tokens"],
-    imageUrl: paymentApp1Img,
-    link: "https://github.com/gupta-soham/paymentsApp/",
-  },
-  {
-    title: "Cricket Chrome Extension",
-    description:
-      "A Chrome extension that fetches live scores and other match details for the Indian Premier League (IPL) cricket matches using the API provided by cricketdata.org.",
-    tags: ["API", "Javascript", "CSS", "JSON"],
-    imageUrl: chromeExtImg,
-    link: "https://github.com/gupta-soham/ipl-chrome-extension/",
-  },
-] as const;
+export const projectsData = {
+  webDev: [
+    {
+      title: "Crypt - Anonymous Community",
+      description: "A full stack web application for students to discuss academic topics anonymously.",
+      image: cryptImg,
+      stack: ["Next.js", "Redis", "Prisma", "TypeScript", "Editor.js"],
+      github: "https://github.com/gupta-soham/Crypt",
+      live: "https://crypt-media.vercel.app/",
+    },
+    {
+      title: "Dog Rater",
+      description: "A Tinder-like app for rating dog breeds with a leaderboard and real-time global chat.",
+      image: dogRaterImg,
+      stack: ["Next.js", "MongoDB", "TypeScript", "Tailwind"],
+      github: "https://github.com/gupta-soham/DogRater",
+      live: "https://dog-rater.vercel.app/",
+    },
+    {
+      title: "Payments App",
+      description: "A full-stack Payment application for creating accounts and transferring money.",
+      image: paymentAppImg,
+      stack: ["React", "MongoDB", "Tailwind", "Node.js"],
+      github: "https://github.com/gupta-soham/paymentsApp/",
+      live: "https://app-payments.vercel.app/",
+    },
+    {
+      title: "IPL Chrome Extension",
+      description: "A Chrome extension for live IPL cricket match scores and details.",
+      image: chromeExtImg,
+      stack: ["API", "JavaScript", "Tailwind"],
+      github: "https://github.com/gupta-soham/ipl-chrome-extension/",
+    },
+  ],
+  web3: [
+    {
+      title: "Web3 Wallet Generator",
+      description: "Decentralized Web3 generator that generates both ETH and SOL wallets",
+      image: web3wallet,
+      stack: ["Next.js", "Ethers.js", "Web3.js", "Tailwind"],
+      github: "https://github.com/gupta-soham/web3-wallet",
+      live: "https://walletweb3.vercel.app/",
+    },
+  ],
+} as const;
 
 export const skillsData = [
   "HTML",

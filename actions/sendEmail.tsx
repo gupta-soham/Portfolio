@@ -33,7 +33,7 @@ export const sendEmail = async (formData: FormData) => {
     from: `${name} <onboarding@resend.dev>`,
     to: "soham.gupta003@gmail.com",
     subject: `Message from: ${name} | through Contact Form`,
-    reply_to: senderEmail as string,
+    replyTo: senderEmail as string,
     react: (
       <EmailStyles
         message={message as string}
