@@ -1,33 +1,35 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import ActiveHeaderContextProvider from "@/context/ActiveHeaderContextProvider";
-import { Toaster } from "react-hot-toast";
-import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Soham Gupta | Personal Portfolio',
-  description: 'Soham is a full-stack developer currently pursuing his Bachelor\'s degree and is proficient in full stack development.',
+  metadataBase: new URL("https://sohamgupta.co/"),
+  title: {
+    default: "Soham Gupta | Personal Portfolio",
+    template: `%s | Soham Gupta`,
+  },
+  description:
+    "Soham is a full-stack developer currently pursuing his Bachelor's degree and is proficient in full stack development.",
   openGraph: {
-    title: 'Soham Gupta | Personal Portfolio',
-    description: 'Soham is a full-stack developer currently pursuing his Bachelor\'s degree and is proficient in full stack development.',
-    url: 'https://sohamgupta.co/',
-    type: 'website',
-    images: [
-      {
-        url: 'https://raw.githubusercontent.com/gupta-soham/Portfolio/master/public/og-image.png',
-        width: 1200,
-        height: 300,
-        alt: 'Website Preview Image',
-      },
-    ],
+    description:
+      "Soham is a full-stack developer currently pursuing his Bachelor's degree and is proficient in full stack development.",
+    images: ["/og.png"],
+    url: "https://sohamgupta.co/",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
+    title: "Soham Gupta | Personal Portfolio",
+    description:
+      "Soham is a full-stack developer currently pursuing his Bachelor's degree and is proficient in full stack development.",
+    creator: "@sohamgpt",
+    images: ["/og.png"],
   },
 };
 

@@ -1,7 +1,8 @@
 import chromeExtImg from "@/public/chrome-ext.png";
-import paymentAppImg from "@/public/payment-app-v1.png";
 import cryptImg from "@/public/crypt.png";
 import dogRaterImg from "@/public/dograter.png";
+import paymentAppImg from "@/public/payment-app-v1.png";
+import solsyncImg from "@/public/solsync.png";
 import web3wallet from "@/public/web3-wallet.png";
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
@@ -57,7 +58,7 @@ export const projectsData = {
   webDev: [
     {
       title: "Crypt - Anonymous Community",
-      description: "A full stack web application for students to discuss academic topics anonymously.",
+      description: "A full stack web application for students to discuss academic topics anonymously",
       image: cryptImg,
       stack: ["Next.js", "Redis", "Prisma", "TypeScript", "Editor.js"],
       github: "https://github.com/gupta-soham/Crypt",
@@ -65,7 +66,7 @@ export const projectsData = {
     },
     {
       title: "Dog Rater",
-      description: "A Tinder-like app for rating dog breeds with a leaderboard and real-time global chat.",
+      description: "A Tinder-like app for rating dog breeds with a leaderboard and real-time global chat",
       image: dogRaterImg,
       stack: ["Next.js", "MongoDB", "TypeScript", "Tailwind"],
       github: "https://github.com/gupta-soham/DogRater",
@@ -73,7 +74,7 @@ export const projectsData = {
     },
     {
       title: "Payments App",
-      description: "A full-stack Payment application for creating accounts and transferring money.",
+      description: "A full-stack Payment application for creating accounts and transferring money",
       image: paymentAppImg,
       stack: ["React", "MongoDB", "Tailwind", "Node.js"],
       github: "https://github.com/gupta-soham/paymentsApp/",
@@ -81,7 +82,7 @@ export const projectsData = {
     },
     {
       title: "IPL Chrome Extension",
-      description: "A Chrome extension for live IPL cricket match scores and details.",
+      description: "A Chrome extension for live IPL cricket match scores and details",
       image: chromeExtImg,
       stack: ["API", "JavaScript", "Tailwind"],
       github: "https://github.com/gupta-soham/ipl-chrome-extension/",
@@ -96,6 +97,14 @@ export const projectsData = {
       github: "https://github.com/gupta-soham/web3-wallet",
       live: "https://walletweb3.vercel.app/",
     },
+    {
+      title: "SOLSync",
+      description: "A decentralized SOL wallet to manage & perform various token-related operations",
+      image: solsyncImg,
+      stack: ["Next.js", "Solana", "Web3.js", "Web3.storage"],
+      github: "https://github.com/gupta-soham/solsync",
+      live: "https://solsync-sg.vercel.app/",
+    }
   ],
 } as const;
 
